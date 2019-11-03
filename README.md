@@ -44,9 +44,9 @@ Sub-Entities: Olives.
 Intent: Customize
 ```
 
-The object entity recognition is done to identify and classify items. This can be done by tokenizing and classifying the words. We used Wit.ai API this would identify items as well as intent from the statements this information extraction step will help us with information extraction. <br />
+The object entity recognition is done to identify and classify items. This can be done by tokenizing and classifying the words. We used `Wit.ai` API this would identify items as well as intent from the statements this information extraction step will help us with information extraction. <br />
 
-The next steps will be to validate the intent classified by the API as `ontology.json` would help us validate the final order but not the intent which is an intermediate step. Also identify the order quantity correctly which is not achieved by using Wit.ai API.
+The next steps will be to validate the intent classified by the API as `ontology.json` would help us validate the final order but not the intent which is an intermediate step. Also identify the order quantity correctly which is not achieved by using `Wit.ai` API.
 
 * Invoice Generation: The entity-intent is queried in the database to create order and invoice. This can be achieved by querying on our data and creating consolidated data frames. At this point, the order is mapped to the items in the menu by the unique identification code which would fetch prices and generate invoices in the end. We would create an SQLlite database for development purpose with item and their prices. It would be simply updated by adding, modifying or deleting item and item prices. <br />
 Output: 
