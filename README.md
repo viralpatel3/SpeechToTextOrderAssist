@@ -25,7 +25,7 @@ The ontology.json can act as a reference to validate the invoice generated in th
 
 ## Proposed plan of research:
 The Quick Service Restaurant (QSR) Assist will have the following key functionalities:
-### Result 1
+### Flow Diagram
 ![Flow-diagram](/images/Flow-diagram.png)
 * Speech-to-Text : Listen for user text and transcribe for speech to text.
 
