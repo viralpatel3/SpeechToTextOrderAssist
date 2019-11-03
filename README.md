@@ -41,20 +41,19 @@ The object entity recognition is done to locate and classify items. This can be 
 
 * Invoice Generation: The entity-intent is queried in the database to create order and invoice. This can be achieved by querying on our data and creating consolidated data frames. At this point, the order is mapped to the items in the menu by the unique identification code which would fetch prices and generate invoices in the end. <br />
 Output: 
-```json
-|             INVOICE              |
-| -------------------------------- |
-| Pizza                 | 1 | $10  |
-| + olives              | 1 | $1.5 |
-| Coke                  | 4 | $12  |
-| Sub .                 | 1 | $9   |
-| Pizza[5 Cheese Pizza] | 1 | $12  |
-| Burger                | 1 | $5   |
-| Fries                 | 1 | $2.5 |
-| -------------------------------- |
-| Total                 | 10| $53  |
-| -------------------------------- |
-```
+INVOICE
+
+ Items | Quantity | price
+  -----|----------|----- 
+ Pizza | 1 | $10  
+ olives (Pizza) | 1 | $1.5 
+ Coke | 4 | $12  
+ Sub | 1 | $9   
+ Pizza(5 cheese pizza) | 1 | $12  
+ Burger | 1 | $5   
+ Fries | 1 | $2.5 
+ Total | 10| $53  
+
 
 
 ## Preliminary Results:
