@@ -186,7 +186,7 @@ The GOOGLE NLP API was tested to get the intent and objects from some text order
 ![Image 2](/images/2.png)
 
 ## References
-* <a href = " https://cloud.google.com/natural-language/">`Natural Language - Google Cloud`</a>
-* <a href = " https://ai.google/tools/datasets/taskmaster-1">`Dataset: taskmaster-1`</a>
-* <a href = "https://cloud.google.com/text-to-speech/">`Text to Speech - Google Cloud`</a>
-* <a href = "https://www.topbots.com/ai-nlp-research-papers-acl2019/">`TOP NLP RESEARCH PAPERS WITH BUSINESS APPLICATIONS FROM ACL 2019`</a>
+* <a href = "https://cloud.google.com/natural-language/" >`Natural Language - Google Cloud`</a>
+* <a href = "https://ai.google/tools/datasets/taskmaster-1" >`Dataset: taskmaster-1`</a>
+* <a href = "https://cloud.google.com/text-to-speech/" >`Text to Speech - Google Cloud`</a>
+* <a href = "https://www.topbots.com/ai-nlp-research-papers-acl2019/" >`TOP NLP RESEARCH PAPERS WITH BUSINESS APPLICATIONS FROM ACL 2019`</a>
