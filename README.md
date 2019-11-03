@@ -1,7 +1,7 @@
 # Speech To Text Order Assist
 ## Table of Contents 
 
-- [Summary](#installation)
+- [Summary](#Summary)
 - [Proposed plan of research](#Proposed)
 - [Preliminary Analysis](#Preliminary)
 - [References](#References)
