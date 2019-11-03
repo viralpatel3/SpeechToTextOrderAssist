@@ -25,6 +25,8 @@ The ontology.json can act as a reference to validate the invoice generated in th
 
 ## Proposed plan of research:
 The Quick Service Restaurant (QSR) Assist will have the following key functionalities:
+### Result 1
+![Flow-diagram](/images/Flow-diagram.png)
 * Speech-to-Text : Listen for user text and transcribe for speech to text.
 
 ```json
@@ -35,7 +37,8 @@ This part of the QSR Assist will be achieved by Google Speech to text API.
 
 * Entity-Intent Recognition: Uses the text transcribed to recognize the entity(object) and intent(action). <br /> 
 eg: ”Please add olives to the pizza”.
-```json
+
+ ```json
 Entities: Pizza.
 Sub-Entities: Olives.
 Intent: Customize
