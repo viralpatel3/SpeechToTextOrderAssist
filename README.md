@@ -2,8 +2,8 @@
 ## Table of Contents 
 
 - [Summary](#Summary)
-- [Proposed plan of research](#Proposed)
-- [Preliminary Analysis](#Preliminary)
+- [Proposed plan of research](#Proposed-plan-of-research)
+- [Preliminary Analysis](#Preliminary-Analysis)
 - [References](#References)
 
 ## Summary
