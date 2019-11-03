@@ -187,10 +187,6 @@ The GOOGLE NLP API was tested to get the intent and objects from some text order
   "language": "en"
 }
 ```
-### Result 1
-![Image 1](/images/1.png)
-### Result 2
-![Image 2](/images/2.png)
 
 ## References
 * <a href = "https://cloud.google.com/natural-language/" >`Natural Language - Google Cloud`</a>
