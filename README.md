@@ -27,6 +27,7 @@ The ontology.json can act as a reference to validate the invoice generated in th
 The Quick Service Restaurant (QSR) Assist will have the following key functionalities:
 ### Flow Diagram
 ![Flow-diagram](/images/Flow-diagram.png)
+* The audio would be recorded and and saved as `.flac` extension by `node-audiorecorder` API.
 * Speech-to-Text : Listen for user text and transcribe for speech to text.
 
 ```json
@@ -199,3 +200,4 @@ The GOOGLE NLP API was tested to get the intent and objects from some text order
 * <a href = "https://cloud.google.com/text-to-speech/" >`Text to Speech - Google Cloud`</a>
 * <a href = "https://www.topbots.com/ai-nlp-research-papers-acl2019/" >`TOP NLP RESEARCH PAPERS WITH BUSINESS APPLICATIONS FROM ACL 2019`</a>
 * <a href = "https://wit.ai/">`Wit.ai`</a>
+* <a href = "https://www.npmjs.com/package/node-audiorecorder">`node-audiorecorder`</a>
