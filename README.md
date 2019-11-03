@@ -1,4 +1,4 @@
-# Speech To Text Order Assist
+# Speech To Text Order Assist [Proposal]
 ## Table of Contents 
 
 - [Summary](#Summary)
