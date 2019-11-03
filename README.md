@@ -56,7 +56,130 @@ INVOICE
 
 
 
-## Preliminary Results:
+## Preliminary Analysis:
+The GOOGLE NLP API was tested to get the intent and objects from some text orders. Here are those examples:
+* ”One Burger and Two Fries”
+```json
+{
+  "entities": [
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 12,
+            "content": "burgers"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "burgers",
+      "salience": 0.58150464,
+      "type": "OTHER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 24,
+            "content": "fries"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "fries",
+      "salience": 0.4184954,
+      "type": "CONSUMER_GOOD"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 7,
+            "content": "five"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "5"
+      },
+      "name": "five",
+      "salience": 0.0,
+      "type": "NUMBER"
+    }
+  ],
+  "language": "en"
+}
+```
+* "I want to order a burger, with coke and fries at the side"
+```json
+  "entities": [
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 18,
+            "content": "burger"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "burger",
+      "salience": 0.36076498,
+      "type": "OTHER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 31,
+            "content": "coke"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "coke",
+      "salience": 0.33710873,
+      "type": "OTHER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 53,
+            "content": "side"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "side",
+      "salience": 0.18460932,
+      "type": "OTHER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 40,
+            "content": "fries"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "fries",
+      "salience": 0.11751698,
+      "type": "CONSUMER_GOOD"
+    }
+  ],
+  "language": "en"
+}
+```
 ### Result 1
 ![Image 1](/images/1.png)
 ### Result 2
