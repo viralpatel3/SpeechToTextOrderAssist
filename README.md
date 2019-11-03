@@ -1,23 +1,13 @@
 # Speech To Text Order Assist
 ## Summary
 
-In recent years, we have witnessed a revolution in the ability of computers to understand
-and to convert natural speech, especially with the application of deep neural networks (e.g.,
-Google Home Mini, Alexa etc). In particular, automated speech systems are still struggling
-to recognize simple words and commands. They don’t engage in a conversation flow and
-force the user to adjust to the system instead of the system adjusting to the user.
-The key focus of this project is to speed up the process flow of ordering at restaurants.
-This is especially useful in a drive-thru and take-out service to get through the queue quickly.
-Currently, a lot of resources and man-power are wasted by a person taking manual orders.
-Eventually, this could replace the person taking orders and save the money and time for
-both user and business end.
-We would be using the google dataset Taskmaster-1. This dataset consists of 13,215 taskbased dialogues in English. We will be using the conversation from only 2 of the 6 domains
-(ordering pizza and ordering coffee drinks) which are relevant to Quick Service Restaurants.
-The Quick Service Restaurant (QSR) Assist aims to accomplish the above. It would start
-out by hearing the order, transcribe it to text, map it to the items in the menu and finally
-create an invoice. From the converted text we would be able to classify the intent of that
-part of the speech such as adding, deleting, modifying and canceling an order. The extracted
-information is then used for keyword extraction and invoice generation.
+In recent years, we have witnessed a revolution in the ability of computers to understand and to convert natural speech, especially with the application of deep neural networks (e.g., Google Home Mini, Alexa etc). In particular, automated speech systems are still struggling to recognize simple words and commands. They don’t engage in a conversation flow and force the user to adjust to the system instead of the system adjusting to the user.<br />
+
+The key focus of this project is to speed up the process flow of ordering at restaurants.This is especially useful in a drive thru and take-out service to get through the queue quickly. Currently, a lot of resources and man-power are wasted by a person taking manual orders. Eventually, this could replace the person taking orders and save the money and time for both user and business end.<br />
+
+We would be using the google dataset Taskmaster-1. This dataset consists of 13,215 taskbased dialogues in English. We will be using the conversation from only 2 of the 6 domains (ordering pizza and ordering coffee drinks) which are relevant to Quick Service Restaurants.<br />
+
+The Quick Service Restaurant (QSR) Assist aims to accomplish the above. It would start out by hearing the order, transcribe it to text, map it to the items in the menu and finally create an invoice. From the converted text we would be able to classify the intent of that part of the speech such as adding, deleting, modifying and canceling an order. The extracted information is then used for keyword extraction and invoice generation.
 
 ## Proposed plan of research:
 The Quick Service Restaurant (QSR) Assist will have the following key functionalities:
