@@ -1,4 +1,11 @@
 # Speech To Text Order Assist
+## Table of Contents 
+
+- [Summary](#installation)
+- [Proposed plan of research](#Proposed)
+- [Preliminary Analysis](#Preliminary)
+- [References](#References)
+
 ## Summary
 
 In recent years, we have witnessed a revolution in the ability of computers to understand and to convert natural speech, especially with the application of deep neural networks (e.g., Google Home Mini, Alexa etc). In particular, automated speech systems are still struggling to recognize simple words and commands. They don’t engage in a conversation flow and force the user to adjust to the system instead of the system adjusting to the user.<br />
