@@ -27,6 +27,7 @@ The ontology.json can act as a reference to validate the invoice generated in th
 The Quick Service Restaurant (QSR) Assist will have the following key functionalities:
 ### Flow Diagram
 ![Flow-diagram](/images/Flow-diagram.png)
+We plan to create end to end software that would record conversation to take order and create invoice by processing the order based on the conversation.
 * The audio would be recorded and and saved as `.flac` extension by `node-audiorecorder` API.
 * Speech-to-Text : Listen for user text and transcribe for speech to text.
 
