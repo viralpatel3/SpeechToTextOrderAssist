@@ -213,8 +213,7 @@ The GOOGLE NLP API was tested to get the intent and objects from some text order
   "language": "en"
 }
 ```
-We ran our model for various different conversations.The results of one such conversation is explained
-below:
+The results of one such conversation from the final model that is the combination on wit.ai and google cloud's natural-language API is explained below:
 ```shell
 sentence = [’Can i order five Burger and fries’,
             ’I would like to order one large pizza and one soda’,
