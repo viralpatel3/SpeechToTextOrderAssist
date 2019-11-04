@@ -72,7 +72,18 @@ We will be evaluating the results from `wit.ai` and from our hybrid model to hav
 We will also be validating our intents using API clients to validate the intermediate steps. Which we cannot at the current point. As this can improve our final results and also give understanding about why we get the incorrect results.<br />
 
 ## Preliminary Analysis:
-![IntentClassification](/images/IntentClassification.png)
+
+Intent Classification
+
+Sentence Confidence | Score | Intent
+--------------------|-------|------- 
+Can i order five Burger and a fries | 0.7741 | Add
+I would like to order one large pizza and one soda | 0.989 | Add
+Please remove the burger from my order | 0.995 | Remove
+Can you swap the burge for a cheese pizza | 0.987 | Update
+I would like to get a coffee too | 0.9744 | Add
+That would be all | 0.70 | End
+
 The GOOGLE NLP API was tested to get the intent and objects from some text orders. Here are those examples:
 * ”One Burger and Two Fries”
 ```json
