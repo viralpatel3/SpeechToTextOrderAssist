@@ -15,6 +15,7 @@ The key focus of this project is to speed up the process flow of ordering at res
 
 The Quick Service Restaurant (QSR) Assist aims to accomplish the above. It would start out by hearing the order, transcribe it to text, map it to the items in the menu and finally create an invoice. From the converted text we would be able to classify the intent of that part of the speech such as adding, deleting, modifying and canceling an order. The extracted information is then used for keyword extraction and invoice generation.<br />
 ![Figure 1](/images/intro.png)
+
 ## Dataset:
 
 We would be using the google dataset Taskmaster-1. This dataset consists of 13,215 taskbased dialogues in English. We will be using the conversation from only 2 of the 6 domains (ordering pizza and ordering coffee drinks) which are relevant to Quick Service Restaurants.<br />
@@ -71,6 +72,7 @@ We will be evaluating the results from `wit.ai` and from our hybrid model to hav
 We will also be validating our intents using API clients to validate the intermediate steps. Which we cannot at the current point. As this can improve our final results and also give understanding about why we get the incorrect results.<br />
 
 ## Preliminary Analysis:
+![IntentClassification](/images/IntentClassification.png)
 The GOOGLE NLP API was tested to get the intent and objects from some text orders. Here are those examples:
 * ”One Burger and Two Fries”
 ```json
