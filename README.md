@@ -36,7 +36,7 @@ We plan to create end to end software that would record conversation to take ord
 Input speech: ”Can I please get a Veggie Pizza and a coke bottle.”
 Transcribed to: ”Can I please get a Veggie Pizza and a coke bottle.”
 ```
-This part of the QSR Assist will be achieved by Google Speech to text API.
+This part of the QSR Assist will be achieved by Google Speech to text API. However, for longer sentences there are misplaced punctuations and spelling errors. We would be implementing embeddings calculating error distances in next phase.
 
 * Entity-Intent Recognition: Uses the text transcribed to recognize the entity(object) and intent(action). <br /> 
 eg: ”Please add olives to the pizza”.
@@ -47,9 +47,15 @@ Sub-Entities: Olives.
 Intent: Customize
 ```
 
-The object entity recognition is done to identify and classify items. This can be done by tokenizing and classifying the words. We used `Wit.ai` API this would identify items as well as intent from the statements this information extraction step will help us with information extraction. <br />
+The object entity recognition is done to identify and classify items. This can be done by tokenizing
+and classifying the words. We used wit.ai API to classify the intent (add, modify or update) of
+the conversation. Refer results from wit.ai API in the result section Intent Classification.
+Item and Quantity recognition is achieved by using natural −language API by Google cloud. The
+Items are identified correctly from the statement along with the value. We are using entity analysis
+from the language module to perform this task. It identifies the value that is the entity and the type
+of entity. It can also recognize the quantity for the order. <br />
 
-The next steps will be to validate the intent classified by the API as `ontology.json` would help us validate the final order but not the intent which is an intermediate step. Also identify the order quantity correctly which is not achieved by using `Wit.ai` API.
+Our next steps for this section is to identify sub-entities and multi word entities. This could be achieved by creating dependencies among the entities. The intent recognition client API is currently unable to identify multiple intents in a sentence which would accomplish in next phase. 
 
 * Invoice Generation: The entity-intent is queried in the database to create order and invoice. This can be achieved by querying on our data and creating consolidated data frames. At this point, the order is mapped to the items in the menu by the unique identification code which would fetch prices and generate invoices in the end. We would create an SQLlite database for development purpose with item and their prices. It would be simply updated by adding, modifying or deleting item and item prices. <br />
 Output: 
@@ -73,10 +79,10 @@ We will also be validating our intents using API clients to validate the interme
 
 ## Preliminary Analysis:
 
-Intent Classification
+Intent Classification confidence scores by wit.ai are given in the table below:
 
-Sentence Confidence | Score | Intent
---------------------|-------|------- 
+Sentence | Confidence Score | Intent
+---------|------------------|------- 
 Can i order five Burger and a fries | 0.7741 | Add
 I would like to order one large pizza and one soda | 0.989 | Add
 Please remove the burger from my order | 0.995 | Remove
@@ -207,6 +213,39 @@ The GOOGLE NLP API was tested to get the intent and objects from some text order
   "language": "en"
 }
 ```
+We ran our model for various different conversations.The results of one such conversation is explained
+below:
+```shell
+sentence = [’Can i order five Burger and fries’,
+            ’I would like to order one large pizza and one soda’,
+            ’Please remove the burger from my order’,
+            ’I Would like to get a coffee too’,
+            ’hi I would like to order one cheese burger and 5 fries and 3 coke and 7 sandwich’,
+            ’Remove one coke too’]
+```
+we observe most of the intents have been classified with a minimum of 0.70 confidence most of the intents have been classified over 0.95 confidence score using wit.ai. Similarly item and quantity have been identified using these intents from natural-language API. The key-value pair of item and quantity at every step is given below as per the intent in each iteration.
+```shell
+{}
+{’burger’: 5, ’fries’: 1}
+{’burger’: 5, ’fries’: 1, ’pizza’: 1, ’soda’: 1}
+{’burger’: 4, ’fries’: 1, ’pizza’: 1, ’soda’: 1}
+{’burger’: 4, ’fries’: 1, ’pizza’: 1, ’soda’: 1, ’coffee’: 1}
+{’burger’: 4, ’fries’: 6, ’pizza’: 1, ’soda’: 1, ’coffee’: 1, ’coke’: 3, ’sandwich’: 7}
+```
+
+Items | Quantity | price
+ -----|----------|----- 
+burger | 4 | 10.0
+fries | 6 | 4.5
+pizza | 1 | 10.0
+soda | 1 | 3.0
+coffee | 1 | 5.0
+coke | 2 | 3.0
+sandwich | 7 | 5.0
+
+we observe the final list of item with their quantity and price associated with it. This could
+be sent to the person preparing the order. This table is further aggregated with price column aggregated
+to total price for that item accounting for quantity and total invoice price.
 
 ## References
 * <a href = "https://cloud.google.com/natural-language/" >`Natural Language - Google Cloud`</a>
